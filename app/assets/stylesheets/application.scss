@@ -22,7 +22,7 @@ header.main{
     @media (min-width:30em){
         text-align:left;
     }
-    background: #282;
+    background: #f0ffff;
     margin:0;
     h1{
         display:none;
@@ -45,7 +45,7 @@ header.main{
     
     nav{
         padding-bottom: 1em;
-        background:#141;
+        background:#fff8dc;
         text-align: center;
         @media (min-width:30em){
             text-align:left;
@@ -64,7 +64,7 @@ header.main{
                 text-transform:uppercase;
                 letter-spacing:0.354em;
                 a{
-                    color:#bfb;
+                    color:#00008b;
                     text-decoration:none;
                 }
                 a:hover{
