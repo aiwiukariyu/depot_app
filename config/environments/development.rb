@@ -62,4 +62,5 @@ Rails.application.configure do
   
   #Allow host
   config.hosts.clear
+  config.web_console.whitelisted_ips = %w( 0.0.0.0/0 ::/0)
 end
