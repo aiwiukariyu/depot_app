@@ -15,7 +15,7 @@ class LineItemsTest < ApplicationSystemTestCase
     click_on "New Line Item"
 
     fill_in "Cart", with: @line_item.cart_id
-    fill_in "Product", with: @line_item.product_id
+    fill_in "Product", with: "1"
     click_on "Create Line item"
 
     assert_text "Line item was successfully created"
