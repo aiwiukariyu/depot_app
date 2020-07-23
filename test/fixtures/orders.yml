@@ -3,7 +3,7 @@
 one:
   name: Super Garlic
   address: MyText
-  email: mail@maibox.com  
+  email: mail@mailbox.com  
   pay_type: Check
 
 two:

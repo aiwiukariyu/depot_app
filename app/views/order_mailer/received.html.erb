@@ -1,0 +1,13 @@
+<h3>Order Confirmation</h3>
+<div>Dear <%=@order.name%></div>
+<p>
+This is just to let you know that we've acknowledged your recent order:
+</p>
+<table>
+  <tr>
+    <th colspan="2">Description</th>
+    <th>Qty</th>
+  </tr>
+<%= render @order.line_items -%>
+</table>
+<p>another mail will be sent when the order is shipped</p>
