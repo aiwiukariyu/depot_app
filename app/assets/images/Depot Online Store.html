@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Depot Online Store</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="tkPVoYUpSfLeQvK3lmcRXYMdYBZ1f8g82k6GhOePqy8YSy2VyMfnsbgfq0qAZ2a+5ovA/HnlSNXdwrr5ZaF8EQ==">
+    
+
+    <link rel="stylesheet" media="all" href="Depot%20Online%20Store_files/application.css" data-turbolinks-track="reload">
+    <script src="Depot%20Online%20Store_files/application-e5d3a8fb02be6745ccba.js" data-turbolinks-track="reload"></script>
+    <script type="text/javascript">
+      I18n.defaultLocale = "en";
+      I18n.locale = "en";
+    </script>
+  </head>
+  <body>
+    <header class="main">
+      <img alt="Depot Best Store" src="Depot%20Online%20Store_files/logo-3dc04c7d230231eda8dcb920c9346c8f5b1ef18237fafb718ce0c22.svg">
+      <h1></h1>
+    </header>
+    <section class="content">
+      <nav class="side_nav">
+        <div id="cart" class="carts">
+          <!--- <p id="notice"></p>
+
+<a href="/carts/92/edit">Edit</a> |
+<a href="/carts">Back</a> 
+<h2>Your classic Cart</h2>
+<ul>
+  <li>1 &times; Brand new Painting</li>
+</ul>
+<form class="button_to" method="post" action="/carts/92"><input type="hidden" name="_method" value="delete" /><input data-confirm="Are you sure?" type="submit" value="Empty cart" /><input type="hidden" name="authenticity_token" value="D4VnTgfSuPwvxZoRhPXOcls9fI2BccpnOeLS3MpfRdLT6DZ5/I0Y4mb1rhO+onw9AqeobY+I42roOMhRyUcQ4g==" /></form>
+--->
+<article>
+  <h2>Your Cart</h2>
+  <table>
+    <tbody><tr>
+  <td class="quantity">1</td>
+  <td>Brand new Painting</td>
+  <td class="price">$65,000.00</td>
+</tr>
+    
+  </tbody><tfoot>
+    <tr>
+      <th colspan="2">Total</th>
+      <td class="price">$65,000.00</td>
+    </tr>
+  </tfoot>
+  </table>
+  <div class="actions">
+      <form class="button_to" method="post" action="/carts/92"><input type="hidden" name="_method" value="delete"><input data-confirm="Are you sure?" type="submit" value="Empty Cart"><input type="hidden" name="authenticity_token" value="tkPVoYUpSfLeQvK3lmcRXYMdYBZ1f8g82k6GhOePqy8YSy2VyMfnsbgfq0qAZ2a+5ovA/HnlSNXdwrr5ZaF8EQ=="></form>
+      <form class="button_to" method="get" action="/orders/new"><input class="checkout" type="submit" value="Checkout"></form>
+  </div>
+</article>
+        </div>
+        <ul>
+          <li><a href="http://localhost:3000/">Home</a></li>
+          <li><a href="http://localhost:3000/questions"><span class="translation_missing" title="translation missing: en.layouts.application.question">Question</span></a></li>
+          <li><a href="http://localhost:3000/news">News</a></li>
+          <li><a href="http://localhost:3000/contact">Contact</a></li>
+        </ul>
+          <nav class="logged_in_nav">
+            <ul>
+              <li><a href="http://localhost:3000/orders">Orders</a></li>
+              <li><a href="http://localhost:3000/products">Product</a></li>
+              <li><a href="http://localhost:3000/users">Users</a></li>
+              <li><form class="button_to" method="post" action="/logout"><input type="hidden" name="_method" value="delete"><input type="submit" value="Logout"><input type="hidden" name="authenticity_token" value="tkPVoYUpSfLeQvK3lmcRXYMdYBZ1f8g82k6GhOePqy8YSy2VyMfnsbgfq0qAZ2a+5ovA/HnlSNXdwrr5ZaF8EQ=="></form></li>
+            </ul>            
+          </nav>
+        <li></li>
+        
+      </nav>
+      <main class="orders">
+        <section class="depot_form">
+  <h1>Please Enter Your Details</h1>
+
+  <form action="/orders" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="tkPVoYUpSfLeQvK3lmcRXYMdYBZ1f8g82k6GhOePqy8YSy2VyMfnsbgfq0qAZ2a+5ovA/HnlSNXdwrr5ZaF8EQ==">
+
+  <div class="field">
+    <label for="order_name">Name</label>
+    <input size="40" type="text" name="order[name]" id="order_name">
+  </div>
+
+  <div class="field">
+    <label for="order_address">Address</label>
+    <textarea rows="3" cols="40" name="order[address]" id="order_address"></textarea>
+  </div>
+  
+  <div class="field">
+    <label for="order_email">E-mail</label>
+    <input size="40" type="email" name="order[email]" id="order_email">
+  </div>
+
+  <div id="pay-type-component"><div><div class="field"><label for="order_pay_type">Pay with</label><select id="order_pay_type" name="order[pay_type]"><option value="" selected="selected">Select a payment method</option><option value="Check">Check</option><option value="Credit Card">Credit Card</option><option value="Purchase order">Purchase Order</option></select></div><div>input your payment method</div></div></div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Place Order" data-disable-with="Place Order">
+  </div>
+</form>
+
+</section>
+<script src="Depot%20Online%20Store_files/pay_types-b034d6c8f5fcf43c0e5f.js"></script>
+
+      </main>
+    </section>
+  
+
+  
+
+</body></html>

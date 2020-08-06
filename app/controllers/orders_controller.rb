@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  skip_before_action :authorize, only: [:new, :create]
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
   before_action :ensure_cart_isnt_empty, only: :new
@@ -8,6 +9,7 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
+    #@user = current_user
   end
 
   # GET /orders/1
@@ -38,7 +40,7 @@ class OrdersController < ApplicationController
         #@order.charge!(pay_type_params)
         #OrderMailer.received(@order).deliver_now
         #OrderMailer.demo.deliver_now
-        format.html { redirect_to store_index_url, notice: 'Order was successfully created.' }
+        format.html { redirect_to store_index_url(locale: I18n.locale), notice: I18n.t('.thanks') }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }

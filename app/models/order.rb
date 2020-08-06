@@ -26,7 +26,7 @@ class Order < ApplicationRecord
       payment_details[:routing]= pay_type_params[:routing_number]
       payment_details[:account]=pay_type_params[:account_number]
     when "Credit Card"
-      payment_method= :credit_cart
+      payment_method= :credit_card
       month, year = pay_type_params[:expiration_date].split(//)
       payment_details[:cc_num]=pay_type_params[:credit_cart_number]
       payment_details[:expiration_month]=month

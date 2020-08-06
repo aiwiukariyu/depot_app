@@ -6,7 +6,9 @@ class UsersController < ApplicationController
   def index
     @users = User.order(:name)
   end
-
+  def current_user
+    User.find_by(id: session[:user_id])
+  end
   # GET /users/1
   # GET /users/1.json
   def show
@@ -54,13 +56,19 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
+    if User.count==1
+      redirect_to users_url, notice: 'Cannot DESTROY last user'
+    else 
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url, notice: 'User #{@user.name} was successfully destroyed.' }
       format.json { head :no_content }
     end
+    end
   end
-
+rescue_from 'User::Error' do |exception|
+  redirect_to users_url, notice: exception.message
+end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

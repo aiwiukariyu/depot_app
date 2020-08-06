@@ -41,13 +41,13 @@ Rails.application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_caching = false
-  
+  config.middleware.use I18n::JS::Middleware
   config.action_mailer.smtp_settings={
     address: "smtp.gmail.com",
     port: 587,
-    domain: 'example.com',
-    user_name: ENV["USER"],
-    password: ENV["PASSWORD"],
+    domain: 'localhost',
+    user_name: ENV['gmail_username'],
+    password: ENV['gmail_password'],
     authentication: 'plain',
     enable_starttls_auto: true
     

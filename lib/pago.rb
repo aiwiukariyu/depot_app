@@ -3,9 +3,7 @@ class Pago
   def self.make_payment(order_id:, payment_method:, payment_details: )
     case payment_method
     when :check
-      Rails.logger.info "Processing check: " +
-      payment_details.fetch(:routing).to_s + "/"+
-      payment_details.fetch(:account).to_s
+      Rails.logger.info "Processing check: " + payment_details.fetch(:routing).to_s + "/" + payment_details.fetch(:account).to_s
     when :credit_card
       Rails.logger.info "Processing credit_card: "+
       payment_details.fetch(:cc_num).to_s + "/" +

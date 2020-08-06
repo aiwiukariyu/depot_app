@@ -17,11 +17,11 @@ class OrderMailer < ApplicationMailer
   #
   def shipped(order)
     @order = order
-    content_type "multipart/alternative"
+    #content_type "multipart/alternative"
     mail to: order.email, subject: 'Order Shipped'
   end
   
   def demo
-    mail to: ENV['USER_MAIL'], subject: 'This is a test'
+    mail to: ENV['gmail_username'], subject: 'This is a test'
   end
 end
