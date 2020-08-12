@@ -80,4 +80,5 @@ Rails.application.configure do
   config.web_console.whitelisted_ips = %w( 0.0.0.0/0 ::/0)
   
   config.action_cable.disable_request_forgery_protection = true
+  config.active_storage.service = :local
 end
