@@ -5,6 +5,19 @@ one:
   address: MyText
   email: mail@mailbox.com  
   pay_type: Check
+  
+another_one:
+  name: Dave Thomas
+  address: Text
+  email: dave@mail.com
+  paytype: Check
+  created_at: <%= 2.days.ago%>
+  
+other_customer:
+  name: Chris Jones
+  address: Text
+  email: christ@mail.com
+  pay_type: Check
 
 two:
   name: MyString
