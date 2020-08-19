@@ -12,11 +12,12 @@ Rails.application.routes.draw do
     resources :orders
     resources :line_items
     resources :carts
-    root 'store#index' , as: 'store_index', via: :all
+    
   end
+  root 'store#index' , as: 'store_index', via: :all
   resources :products do
     get :who_bought, on: :member
   end
-  resources :support_request, only: [:index, :update]
+  resources :support_requests, only: [:index, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
